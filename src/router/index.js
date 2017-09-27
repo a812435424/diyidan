@@ -17,3 +17,38 @@ export default new Router({
     }],
     linkActiveClass: 'active'
 })
+
+Vue.component('wk-tooltip', {
+    props: ['message', 'isShow', 'time'],
+    template: '<div class="tooltip" v-if="isShow"><div class="tooltip_txt">{{message}}</div></div>',
+    data() {
+        return {
+            myIsShow: this.isShow
+        };
+    },
+    watch: {
+        isShow(val) {
+            this.myIsShow = val;
+            this.close();
+        },
+        myIsShow(val) {
+            this.$emit("on-isShow-change", val);
+        }
+    },
+    mounted() {
+        this.close()
+    },
+    methods: {
+        close() {
+            if (this.myIsShow == true) {
+                var that = this
+                setTimeout(function() {
+                    that.myIsShow = false
+                }, this.time);
+            }
+        },
+        onResultChange(val) {
+            this.isShow = val;
+        }
+    }
+})

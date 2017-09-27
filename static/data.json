@@ -1,0 +1,259 @@
+{
+    "banner": [{
+            "id": 0,
+            "title": "十月新番导视",
+            "src": "http://image.diyidan.net/banner/2017/9/23/2f53b636c9bf4fc3.jpg!large",
+            "href": "https://www.baidu.com/"
+        },
+        {
+            "id": 1,
+            "title": "迎国庆 抽大奖",
+            "src": "http://image.diyidan.net/banner/2017/9/22/7bdd5f19325045c1.jpg!large",
+            "href": "https://www.bilibili.com/"
+        },
+        {
+            "id": 2,
+            "title": "刀剑神域剧场版观影报告",
+            "src": "http://image.diyidan.net/banner/2017/9/23/dade503c7f9b452e.jpg!large",
+            "href": "https://www.bilibili.com/"
+        }
+    ],
+    "hot_topic": [{
+        "id": 0,
+        "title": "少女咖啡枪",
+        "src": "http://image.diyidan.net/game/2016/mengniang/720-400-2.jpg!large",
+        "href": "http://www.baidu.com/"
+    }, {
+        "id": 1,
+        "title": "万崩纪！崩坏万神，唯我独尊！",
+        "src": "http://image.diyidan.net/post/2017/1/18/cCq7z8dwqh7d3WFc.jpg!webindex",
+        "href": "http://www.baidu.com/"
+    }, {
+        "id": 2,
+        "title": "【原创】就知道你最喜欢这种纯音乐 一首正能量小电音",
+        "src": "http://image.diyidan.net/music/2017/9/21/nu2PbD51mWqKucwC.jpg!webindex",
+        "href": "http://www.baidu.com/"
+    }],
+    "topic": [{
+        "topic_username": "Monica碳",
+        "topic_userid": "012",
+        "topic_userlevel": "8",
+        "topic_time": "33分钟前",
+        "topic_userimg": "https://image.diyidan.net/user/2017/3/23/YWMTNWPMRTYXUQYK.jpg!tiny",
+        "topic_userhref": "https://www.baidu.com/",
+        "topic_title": "人工智障AI酱 COS",
+        "topic_href": "https://www.baidu.com/",
+        "topic_text": "【“世界第一个Virtual YouTuber！活跃于虚拟世界的可爱女主播！爱酱登场!”('◡')ﾉ <br > “是人工智能不是人工智障啊喂！” m9(｀´) !!!!】（教师节必须搞事情哇！！！ 投喂第一的宝宝送这套明信片， 20 张 + ）",
+        "topic_collect": {
+            "state": 0,
+            "number": 250
+        },
+        "topic_comment": {
+            "number": 100,
+            "href": "https://www.baidu.com/"
+        },
+        "topic_gift": {
+            "state": 0,
+            "number": 55
+        },
+        "topic_img": [{
+            "id": 0,
+            "src": "http://image.diyidan.net/post/2017/9/9/cHdNWFalLiAZkhoD.jpg!weblarge"
+        }, {
+            "id": 1,
+            "src": "//image.diyidan.net/post/2017/9/9/PwzHInymNHQPfX80.jpg!weblarge"
+        }, {
+            "id": 2,
+            "src": "//image.diyidan.net/post/2017/9/9/h22NkDSUwtNUpFXB.jpg!weblarge"
+        }],
+        "topic_music": "",
+        "topic_video": "",
+        "topic_special": {
+            "title": "漫画",
+            "href": "http://www.baidu.com/"
+        },
+        "topic_label": [{
+            "title": "漫画",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "COS",
+            "href": "http://www.baidu.com/"
+        }]
+    }, {
+        "topic_username": "YC、幕白",
+        "topic_userid": "013",
+        "topic_userlevel": "8",
+        "topic_time": "09-15",
+        "topic_userimg": "https://image.diyidan.net/user/2017/9/15/LQu3Ke8hPDmjCcIh.jpg!tiny",
+        "topic_userhref": "https://www.baidu.com/",
+        "topic_title": "噗，流鼻血 高质量，胸器太重。",
+        "topic_href": "https://www.baidu.com/",
+        "topic_text": "这是第二版。<br>#小林家的龙女仆# #小林家的妹抖龙# #Cosplay# #侵权致歉#<br>妹抖龙比基尼版来啦[em]e400338[/em][em]e400338[/em]<br>夏天到了和露科亚还有托尔一起去海边玩呀！<br>露科亚：@夏美酱-<br>托尔：@柳侑绮Sevenbaby- <br>服装后期：@柳侑绮Sevenbaby- <br>摄影师@刘宥灵Jovie",
+        "topic_collect": {
+            "state": 0,
+            "number": 250
+        },
+        "topic_comment": {
+            "number": 100,
+            "href": "https://www.baidu.com/"
+        },
+        "topic_gift": {
+            "state": 0,
+            "number": 55
+        },
+        "topic_img": [{
+            "id": 0,
+            "src": "//image.diyidan.net/post/2017/9/15/UHTel7xUkhqA9bCC.jpg!weblarge"
+        }, {
+            "id": 1,
+            "src": "//image.diyidan.net/post/2017/9/15/dzkS8aVE6zztpvnV.jpg!weblarge"
+        }],
+        "topic_music": "",
+        "topic_video": "",
+        "topic_special": {
+            "title": "漫画",
+            "href": "http://www.baidu.com/"
+        },
+        "topic_label": [{
+            "title": "漫画",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "COS",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "动漫",
+            "href": "http://www.baidu.com/"
+        }]
+    }, {
+        "topic_username": "辛楠_兔兔",
+        "topic_userid": "014",
+        "topic_userlevel": "11",
+        "topic_time": "1天前",
+        "topic_userimg": "//image.diyidan.net/user/2016/12/11/vBRQD9Z3x4swhkpj.jpg!tiny",
+        "topic_userhref": "https://www.baidu.com/",
+        "topic_title": "王者荣耀钟无艳夏日皮肤。",
+        "topic_href": "https://www.baidu.com/",
+        "topic_text": "喵喵 抓住夏天的尾巴，好久不见啦，变身",
+        "topic_collect": {
+            "state": 0,
+            "number": 250
+        },
+        "topic_comment": {
+            "number": 100,
+            "href": "https://www.baidu.com/"
+        },
+        "topic_gift": {
+            "state": 0,
+            "number": 55
+        },
+        "topic_img": [{
+            "id": 0,
+            "src": "//image.diyidan.net/post/2017/9/25/LBYMXNPPMIFCSZWP.jpg!weblarge"
+        }],
+        "topic_music": "",
+        "topic_video": "",
+        "topic_special": {
+            "title": "漫画",
+            "href": "http://www.baidu.com/"
+        },
+        "topic_label": [{
+            "title": "漫画",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "COS",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "动漫",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "游戏",
+            "href": "http://www.baidu.com/"
+        }]
+    }, {
+        "topic_username": "辛楠_兔兔",
+        "topic_userid": "014",
+        "topic_userlevel": "11",
+        "topic_time": "1天前",
+        "topic_userimg": "//image.diyidan.net/user/2016/12/11/vBRQD9Z3x4swhkpj.jpg!tiny",
+        "topic_userhref": "https://www.baidu.com/",
+        "topic_title": "王者荣耀钟无艳夏日皮肤。",
+        "topic_href": "https://www.baidu.com/",
+        "topic_text": "喵喵 抓住夏天的尾巴，好久不见啦，变身",
+        "topic_collect": {
+            "state": 0,
+            "number": 250
+        },
+        "topic_comment": {
+            "number": 100,
+            "href": "https://www.baidu.com/"
+        },
+        "topic_gift": {
+            "state": 0,
+            "number": 55
+        },
+        "topic_img": [],
+        "topic_music": "",
+        "topic_video": "//media.diyidan.net/video/2017/9/23/gSqA7Grbcx8pm67z_1.mp4?v=1.1&sign=fc9f3c87b8e484582ee26655ea64d4cc&t=1506502334",
+        "topic_special": {
+            "title": "视频",
+            "href": "http://www.baidu.com/"
+        },
+        "topic_label": [{
+            "title": "视频",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "搞笑",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "全明星",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "鬼畜",
+            "href": "http://www.baidu.com/"
+        }]
+    }, {
+        "topic_username": "贝莉",
+        "topic_userid": "015",
+        "topic_userlevel": "7",
+        "topic_time": "2小时前",
+        "topic_userimg": "//image.diyidan.net/user/2017/7/13/qq3VsQoqLwcyn0Zo.jpg!tiny",
+        "topic_userhref": "https://www.baidu.com/",
+        "topic_title": "海洋之歌",
+        "topic_href": "https://www.baidu.com/",
+        "topic_text": "Y(＾_＾)@夏の取り締まり 来看看吧",
+        "topic_collect": {
+            "state": 0,
+            "number": 250
+        },
+        "topic_comment": {
+            "number": 100,
+            "href": "https://www.baidu.com/"
+        },
+        "topic_gift": {
+            "state": 0,
+            "number": 55
+        },
+        "topic_img": [],
+        "topic_music": {
+            "title": "海洋之歌",
+            "author": "贝莉",
+            "img": "//image.diyidan.net/music/2017/9/27/Tq0czjspLYX0VzxA.jpg",
+            "src": "https://api.diyidan.net/v0.2/music/url?music_id=431795744"
+        },
+        "topic_video": "",
+        "topic_special": {
+            "title": "ACG音乐",
+            "href": "http://www.baidu.com/"
+        },
+        "topic_label": [{
+            "title": "ACG音乐",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "GALGAME",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "CLANNAD",
+            "href": "http://www.baidu.com/"
+        }]
+    }]
+}

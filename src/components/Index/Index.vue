@@ -1,115 +1,190 @@
 <template>
-<div class="index">
-  <div id="header">
-      <div class="header_title">
-        <ul>
-          <li>关注</li>
-          <li class="active">推荐</li>
-          <li>视频</li>
-        </ul>
-      </div>
-      <div class="header_fr">
-        <i class="iconfont">&#xe732;</i>
-      </div>
-  </div>
-  <!-- 轮播图开始 -->
-  <div class="banner">
-    <swiper :options="swiperOption" ref="mySwiper">
-        <swiper-slide><img src="static/img/banner1.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="static/img/banner2.jpg" alt=""></swiper-slide>
-        <div class="swiper-pagination"  slot="pagination"></div>
-    </swiper>
-  </div>
-  <!-- 轮播图结束 -->
-  <!-- 热门话题开始 -->
-  <div class="hot_topic">
-    <ul>
-      <li>
-        <img src="static/img/banner1.jpg" alt="">
-        <span class="padding_not">我与初音未来的十年</span>
-      </li>
-      <li>
-          <img src="static/img/banner2.jpg" alt="">
-          <span class="padding_not">我与初音未来的十年</span>
-      </li>
-      <li>
-          <img src="static/img/banner1.jpg" alt="">
-          <span class="padding_not">我与初音未来的十年</span>
-      </li>
-    </ul>
-  </div>
-  <!-- 热门话题结束 -->
-  <!-- 更多话题开始 -->
-  <div class="topic">
-    <div class="topic_box">
-        <div class="topic_user">
-          <div class="topic_user_box">
-            <div class="topic_user_pic"><img src="static/img/banner1.jpg" alt=""></div>
-            <div class="topic_user_message">
-              <div class="topic_user_name">执念。5cy</div>
-              <div class="topic_user_level"><span>8</span></div>
-              <div class="topic_user_time">33分钟前</div>
-            </div>
-          </div>
-          <div class="topic_user_operate">
-              <i class="iconfont">&#xe602;</i>
-          </div>
-        </div>
-        <div class="topic_body">
-          <div class="topic_title">七公主漫画</div>
-          <div class="topic_info">
-            <div class="topic_info_txt">快给楼楼糖糖，楼楼继续更</div>
-            <div class="topic_info_img">
-                <div><img src="static/img/banner1.jpg" alt=""></div>
-                <div><img src="static/img/banner1.jpg" alt=""></div>
-                <div><img src="static/img/banner1.jpg" alt=""></div>
-            </div>
-          </div>
-          <div class="topic_label">
-            <em><i class="iconfont">&#xe655;</i>漫画</em>
-            <span>漫画</span>
-            <span>COS</span>
-          </div>
-        </div>
-        <div class="topic_operate">
+    <div class="index">
+      <div id="header">
+        <div class="header_title">
           <ul>
-            <li><i class="iconfont">&#xe662;</i><span>333</span></li>
-            <li><i class="iconfont">&#xe6b7;</i><span>100</span></li>
-            <li><i class="iconfont">&#xe6de;</i><span>99</span></li>
+            <li>关注</li>
+            <li class="active">推荐</li>
+            <li>视频</li>
           </ul>
         </div>
-    </div>
-  </div>
-  <!-- 更多话题结束 -->
-  <!-- 对该用户进行操作开始 -->
-  <div class="topic_user_operate_body" v-show="operate">
-    <div class="topic_user_operate_box_bg"></div>
+        <div class="header_fr">
+          <i class="iconfont">&#xe732;</i>
+        </div>
+      </div>
+      <!-- 轮播图开始 -->
+      <div class="banner">
+        <swiper :options="swiperOption" ref="mySwiper">
+          <template v-if="banner" v-for="item in banner">
+            <swiper-slide>
+              <a :href="item.href">
+                <img :src="item.src" alt="">
+              </a>
+            </swiper-slide>
+          </template>
+<div class="swiper-pagination" slot="pagination"></div>
+</swiper>
+</div>
+<!-- 轮播图结束 -->
+<!-- 热门话题开始 -->
+<div class="hot_topic">
+    <ul>
+        <template v-if="hot_topic" v-for="item in hot_topic">
+            <li>
+              <a :href="item.href">
+                <img :src="item.src" alt="">
+                <span class="padding_not">{{item.title}}</span>
+              </a>
+            </li>
+          </template>
+    </ul>
+</div>
+<!-- 热门话题结束 -->
+<!-- 更多话题开始 -->
+<div class="topic">
+    <template v-if="topic" v-for="(item,index) in topic">
+          <div class="topic_box">
+            <div class="topic_user">
+              <a :href="item.topic_userhref">
+                <div class="topic_user_box">
+                  <div class="topic_user_pic"><img :src="item.topic_userimg" alt=""></div>
+                  <div class="topic_user_message">
+                    <div class="topic_user_name">{{item.topic_username}}</div>
+                    <div class="topic_user_level"><span>{{item.topic_userlevel}}</span></div>
+                    <div class="topic_user_time">{{item.topic_time}}</div>
+                  </div>
+                </div>
+              </a>
+              <div class="topic_user_operate" @click="active_operate()">
+                <i class="iconfont">&#xe602;</i>
+              </div>
+            </div>
+            <div class="topic_body">
+              <a :href="item.topic_href">
+                <div class="topic_title">{{item.topic_title}}</div>
+                <div class="topic_info">
+                  <div class="topic_info_txt" v-html="item.topic_text"></div>
+
+</div>
+</a>
+<div class="topic_info_img" :class="{topic_info_img_more:(item.topic_img.length<3)}">
+  <a :href="item.topic_href">
+    <div class="topic_info_img_box">
+  <template v-if="item.topic_img" v-for="item2 in item.topic_img">
+    <div><img :src="item2.src" alt=""></div>
+  </template>
+</div>
+</a>
+<template v-if="item.topic_video">
+    <video :src="item.topic_video" controls="controls"></video>
+  </template>
+<template v-if="item.topic_music">
+      <audio :src="item.topic_music.src" controls="controls"></audio>
+    </template>
+</div>
+<div class="topic_label">
+    <em><i class="iconfont">&#xe655;</i>{{item.topic_special.title}}</em>
+    <template v-if="item.topic_label" v-for="item3 in item.topic_label">
+      <span>{{item3.title}}</span>
+    </template>
+</div>
+</div>
+<div class="topic_operate">
+    <ul>
+        <li @click="collect(index)" :class="{checked:item.topic_collect.state}"><i class="iconfont">&#xe662;</i><span>{{item.topic_collect.number}}</span></li>
+        <li><i class="iconfont">&#xe6b7;</i><span>{{item.topic_comment.number}}</span></li>
+        <li @click="gift(index)" :class="{checked:item.topic_gift.state}"><i class="iconfont">&#xe6de;</i><span>{{item.topic_gift.number}}</span></li>
+    </ul>
+</div>
+</div>
+</template>
+</div>
+<!-- 更多话题结束 -->
+<!-- 对该用户进行操作开始 -->
+<div class="topic_user_operate_body" v-show="operate">
+    <div class="topic_user_operate_box_bg" @click="active_operate()"></div>
     <div class="topic_user_operate_box">
-      <ul>
-        <li>分享</li>
-        <li>不感兴趣并隐藏</li>
-        <li>举报</li>
-      </ul>
+        <ul>
+            <li>分享</li>
+            <li>不感兴趣并隐藏</li>
+            <li>举报</li>
+        </ul>
     </div>
 </div>
-  <!-- 对该用户进行操作结束 -->
-</div>
-
-
+<!-- 对该用户进行操作结束 -->
+<wk-tooltip :isShow="isShow" :time="time" :message="message" @on-isShow-change="onResultChange"></wk-tooltip>
 </div>
 </template>
 <script>
+    import Vue from 'vue'
+    import Router from 'vue-router'
+    import axios from 'axios'
+    Vue.prototype.$ajax = axios
+
     export default {
         name: 'index',
         data() {
             return {
-                "operate": 0,
+                isShow: false,
+                time: 2000,
+                message: '',
+                banner: {},
+                hot_topic: {},
+                topic: {},
+                operate: 0,
+                user_id: 123,
+                operate_id: 0,
                 swiperOption: {
                     autoplay: 3000,
                     loop: true,
                     pagination: '.swiper-pagination',
                     paginationClickable: true
                 }
+            }
+        },
+        created() {
+            axios.get('static/data.json', {
+                params: {
+                    ID: 12345
+                }
+            }).then((res) => {
+                this.banner = res.data.banner;
+                this.hot_topic = res.data.hot_topic;
+                this.topic = res.data.topic;
+            })
+        },
+        methods: {
+            active_operate() {
+                if (this.operate == 1) {
+                    this.operate = 0
+                } else {
+                    this.operate = 1
+                }
+            },
+            collect(index) {
+                if (this.topic[index].topic_collect.state == 0) {
+                    this.isShow = true;
+                    this.message = "收藏成功";
+                    this.topic[index].topic_collect.state = 1;
+                    this.topic[index].topic_collect.number++;
+                } else {
+                    this.topic[index].topic_collect.state = 0;
+                    this.topic[index].topic_collect.number--;
+                }
+            },
+            gift(index) {
+                if (this.topic[index].topic_gift.state == 0) {
+                    this.isShow = true;
+                    this.message = "送糖成功";
+                    this.topic[index].topic_gift.state = 1;
+                    this.topic[index].topic_gift.number++;
+                } else {
+                    this.topic[index].topic_gift.state = 0;
+                    this.topic[index].topic_gift.number--;
+                }
+            },
+            onResultChange(val) {
+                this.isShow = val;
             }
         }
     }
@@ -135,6 +210,7 @@
         padding: 0 10px;
         position: relative;
         cursor: pointer;
+        font-size: 14px;
     }
     
     .header_title ul li.active::after {
@@ -322,7 +398,7 @@
     }
     
     .topic_user_level span {
-        font-size: 12px;
+        font-size: 10px;
         color: #fff;
         position: relative;
         z-index: 3;
@@ -336,6 +412,7 @@
         left: 0;
         color: #ffc000;
         font-size: 24px;
+        line-height: 32px;
     }
     
     .topic_body {
@@ -354,18 +431,40 @@
         font-size: 15px;
         color: #5a5a5a;
         line-height: 24px;
+        max-height: 48px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
     
-    .topic_info_img {
+    .topic_info_img_box {
         display: flex;
     }
     
-    .topic_info_img div {
+    .topic_info_img_box div {
         flex: 1;
         margin: 5px 5px;
         height: 30vw;
         text-align: center;
         overflow: hidden;
+        vertical-align: middle;
+    }
+    
+    .topic_info_img_more .topic_info_img_box div {
+        height: 50vw;
+    }
+    
+    .topic_info_img video {
+        width: 100%;
+        height: 50vw;
+        margin: 5px 0;
+    }
+    
+    .topic_info_img audio {
+        width: 100%;
+        margin: 5px 0;
     }
     
     .topic_info_img div img {
@@ -431,6 +530,10 @@
     .topic_operate ul li i {
         font-size: 16px;
         margin: 0 5px 0 0;
+    }
+    
+    .topic_operate ul li.checked i {
+        color: #fe7780;
     }
     
     .topic_user_operate_box_bg {
