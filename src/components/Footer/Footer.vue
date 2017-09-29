@@ -51,7 +51,7 @@
         background: #fff;
         height: 50px;
     }
-    
+
     .footer::before {
         content: "";
         position: absolute;
@@ -67,7 +67,7 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box
     }
-    
+
     .footer ul li {
         float: left;
         text-align: center;
@@ -76,14 +76,14 @@
         color: #979797;
         line-height: 18px;
     }
-    
+
     .footer ul li i {
         display: block;
         font-size: 21px;
         margin: 8px 0 3px;
         color: #b5b5b5;
     }
-    
+
     .footer ul li .router-link-exact-active,
     .footer ul li .router-link-exact-active i {
         color: #fe7881;
