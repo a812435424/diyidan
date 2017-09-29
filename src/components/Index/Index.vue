@@ -14,9 +14,15 @@
         </div>
       </div>
       <div class="index_box">
-        <wk-attention v-show="tab==0"></wk-attention>
-        <wk-recommend v-show="tab==1"></wk-recommend>
-        <wk-video v-show="tab==2"></wk-video>
+        <div :class="{index_box_body:boxactive}" v-show="tab==0">
+          <wk-attention></wk-attention>
+        </div>
+        <div :class="{index_box_body:boxactive}" v-show="tab==1">
+          <wk-recommend></wk-recommend>
+        </div>
+        <div :class="{index_box_body:boxactive}" v-show="tab==2">
+         <wk-video></wk-video>
+        </div>
       </div>
 </div>
 </template>
@@ -34,7 +40,8 @@
         data() {
             return {
                 tab: 1,
-                left_tab: 50
+                left_tab: 50,
+                boxactive: 0
             }
         },
         components: {
@@ -46,6 +53,7 @@
             active_tab(index) {
                 this.tab = index;
                 this.left_tab = index * 50;
+                this.boxactive = 1;
             }
         }
     }
@@ -108,6 +116,11 @@
     }
     
     .index_box>div {
+        width: 100%;
+        width: 100vw;
+    }
+    
+    .index_box>div.index_box_body {
         width: 100%;
         width: 100vw;
         animation: left_to 0.5s;

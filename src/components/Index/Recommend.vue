@@ -64,7 +64,9 @@
 </div>
 </a>
 <template v-if="item.topic_video">
-    <video :src="item.topic_video" width="100%" controls="controls"></video>
+    <video width="100%" controls="controls">
+      <source :src="item.topic_video" type="video/mp4">
+    </video>
   </template>
 <template v-if="item.topic_music">
       <audio :src="item.topic_music.src" width="100%" controls="controls"></audio>
@@ -507,7 +509,7 @@
         margin-top: -68px;
         text-align: center;
         background: #fff;
-        border-radius: 10px;
+        border-radius: 5px;
         line-height: 45px;
         color: #999;
         font-size: 14px;
